@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
     config.vm.box = "centos/7"
     config.ssh.username = "vagrant"
     config.ssh.insert_key = false
-    config.ssh.private_key_path = ["/home/marcos/.ssh/id_rsa", "~/.vagrant.d/insecure_private_key"]
+    config.ssh.private_key_path = ["/home/marcos/.ssh/vagrant_rsa", "~/.vagrant.d/insecure_private_key"]
     jen01v.vm.hostname = "jen01v"
     jen01v.vm.network :private_network, ip: "192.168.205.10"
     # jen01v.vm.network :public_network, ip: "192.168.1.10", bridge: "wlo1"
