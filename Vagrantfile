@@ -19,6 +19,11 @@ Vagrant.configure("2") do |config|
     config.vm.provision "ansible" do |ansible|
       ansible.verbose = "v"
       ansible.playbook = "/workspace/git/ansible/playbooks/role-base.yml"
+      ansible.extra_vars = {
+        "user" =>"marcos",
+        "sshkey" => "/home/marcos/.ssh/id_rsa.pub",
+        "sshroot" => "False", 
+      }
     end
   end
 end
